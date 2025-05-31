@@ -6,7 +6,6 @@
   <title>Login - Fontanería</title>
   <link rel="stylesheet" href="estilos.css" />
   <style>
-    /* Estilos básicos */
     body { font-family: Arial, sans-serif; background: #f0f0f0; padding: 30px; }
     .container { max-width: 400px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 8px #aaa; }
     label, input, button { display: block; width: 100%; margin-top: 12px; }
@@ -49,8 +48,6 @@
 
       if (usuario.email === emailIngresado && usuario.password === passwordIngresado) {
         alert("Inicio de sesión exitoso.");
-
-        // Redirige según el rol con rutas relativas a la raíz
         if (usuario.rol === "empleado") {
           window.location.href = "empleado/panel-empleado.html";
         } else if (usuario.rol === "cliente") {

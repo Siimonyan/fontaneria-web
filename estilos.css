@@ -1,4 +1,3 @@
-/* reset básico y fuente */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,6 +25,7 @@ body {
 }
 
 /* títulos */
+
 h1, h2 {
   color: #2c3e50;
   margin-bottom: 20px;
@@ -34,6 +34,7 @@ h1, h2 {
 }
 
 /* formularios */
+
 form label {
   display: block;
   font-weight: 600;
@@ -70,6 +71,7 @@ textarea:focus {
 }
 
 /* botones */
+
 button {
   margin-top: 25px;
   background-color: #2980b9;
@@ -92,6 +94,7 @@ button:focus {
 }
 
 /* enlaces */
+
 a {
   color: #2980b9;
   text-decoration: none;
@@ -108,6 +111,7 @@ a:focus {
 }
 
 /* tablas (para gestión productos y servicios) */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -132,6 +136,7 @@ tr:nth-child(even) {
 }
 
 /* botones dentro de tabla */
+
 .acciones button {
   background-color: #3498db;
   border: none;
@@ -150,6 +155,7 @@ tr:nth-child(even) {
 }
 
 /* menú de navegación (panel empleado / cliente) */
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -180,6 +186,7 @@ nav ul li a:focus {
 }
 
 /* header simple para paneles */
+
 header {
   background-color: #2980b9;
   color: white;
@@ -191,7 +198,8 @@ header {
   font-size: 1.5rem;
 }
 
-/* Responsividad básica */
+/* basico*/
+
 @media (max-width: 640px) {
   body {
     padding: 15px;
@@ -203,8 +211,6 @@ header {
     max-width: 100%;
   }
 }
-
-
 
 .boton {
   display: inline-block;
