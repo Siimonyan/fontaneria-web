@@ -15,7 +15,6 @@
     .links { margin-top: 15px; text-align: center; }
     .links a { color: #007bff; text-decoration: none; }
   </style>
-  
 </head>
 <body>
   <div class="container">
@@ -34,29 +33,35 @@
     </div>
   </div>
   <script>
-  document.getElementById("loginForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
 
-    const emailIngresado = document.getElementById("email").value.trim();
-    const passwordIngresado = document.getElementById("password").value;
+      const emailIngresado = document.getElementById("email").value.trim();
+      const passwordIngresado = document.getElementById("password").value;
 
-    const datosGuardados = localStorage.getItem("usuarioRegistrado");
-    if (!datosGuardados) {
-      alert("No hay usuarios registrados.");
-      return;
-    }
+      const datosGuardados = localStorage.getItem("usuarioRegistrado");
+      if (!datosGuardados) {
+        alert("No hay usuarios registrados.");
+        return;
+      }
 
-    const usuario = JSON.parse(datosGuardados);
+      const usuario = JSON.parse(datosGuardados);
 
-    if (usuario.email === emailIngresado && usuario.password === passwordIngresado) {
-      alert("Inicio de sesión exitoso.");
-      // Guardar sesión si quieres
-      window.location.href = "panel-empleado.html"; // o redirige al panel del cliente si prefieres
-    } else {
-      alert("Correo o contraseña incorrectos.");
-    }
-  });
-</script>
+      if (usuario.email === emailIngresado && usuario.password === passwordIngresado) {
+        alert("Inicio de sesión exitoso.");
 
+        // Redirige según el rol con rutas relativas a la raíz
+        if (usuario.rol === "empleado") {
+          window.location.href = "empleado/panel-empleado.html";
+        } else if (usuario.rol === "cliente") {
+          window.location.href = "cliente/panel-cliente.html";
+        } else {
+          alert("Rol de usuario desconocido.");
+        }
+      } else {
+        alert("Correo o contraseña incorrectos.");
+      }
+    });
+  </script>
 </body>
 </html>
