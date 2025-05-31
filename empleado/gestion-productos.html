@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestión de Productos - Fontanería</title>
+  <link rel="stylesheet" href="../estilos.css" />
+  <style>
+    .producto-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    form {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px #ccc;
+      margin-bottom: 40px;
+    }
+
+    form label {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      margin-top: 6px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    form button {
+      margin-top: 20px;
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    form button:hover {
+      background: #1e7e34;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background: #2980b9;
+      color: white;
+    }
+
+    .acciones button {
+      margin-right: 6px;
+      padding: 6px 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .acciones button:hover {
+      background: #0056b3;
+    }
+
+    .volver {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .volver a {
+      background: #6c757d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .volver a:hover {
+      background: #5a6268;
+    }
+  </style>
+</head>
+<body>
+  <div class="producto-container">
+    <h2>Gestión de Productos</h2>
+
+    <form id="formProducto" action="#" method="POST">
+      <label for="nombreProducto">Nombre del Producto</label>
+      <input type="text" id="nombreProducto" name="nombreProducto" required placeholder="Ej: Válvula de cierre" />
+
+      <label for="descripcionProducto">Descripción</label>
+      <textarea id="descripcionProducto" name="descripcionProducto" rows="3" placeholder="Detalles del producto"></textarea>
+
+      <label for="precioProducto">Precio (€)</label>
+      <input type="number" id="precioProducto" name="precioProducto" min="0" step="0.01" required placeholder="Ej: 15.50" />
+
+      <label for="stockProducto">Stock disponible</label>
+      <input type="number" id="stockProducto" name="stockProducto" min="0" required placeholder="Cantidad disponible" />
+
+      <button type="submit">Agregar Producto</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Precio (€)</th>
+          <th>Stock</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Válvula de cierre</td>
+          <td>Válvula para cerrar paso de agua</td>
+          <td>15.50</td>
+          <td>20</td>
+          <td class="acciones">
+            <button>Editar</button>
+            <button>Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="volver">
+      <a href="panel-empleado.html">Volver al panel empleado</a>
+    </div>
+  </div>
+</body>
+</html>

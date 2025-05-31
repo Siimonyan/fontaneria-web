@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solicitar Reparación - Fontanería</title>
+  <link rel="stylesheet" href="../estilos.css" />
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f7f7; padding: 20px; }
+    .container { max-width: 600px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 8px #ccc; }
+    label, input, select, textarea, button { display: block; width: 100%; margin-top: 12px; }
+    button { background: #007bff; color: white; border: none; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+    button:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Solicitar Reparación</h2>
+    <form id="solicitarReparacion" action="#" method="POST">
+      <label for="tipoReparacion">Tipo de Reparación</label>
+      <select id="tipoReparacion" name="tipoReparacion" required>
+        <option value="" disabled selected>Selecciona tipo</option>
+        <option value="fugaAgua">Fuga de agua</option>
+        <option value="desague">Desagüe</option>
+        <option value="calentador">Calentador</option>
+        <option value="otros">Otros</option>
+      </select>
+
+      <label for="descripcion">Descripción del problema</label>
+      <textarea id="descripcion" name="descripcion" rows="4" placeholder="Explica el problema..." required></textarea>
+
+      <label for="fechaPreferida">Fecha solicitud</label>
+      <input type="date" id="fechaPreferida" name="fechaPreferida" required />
+
+      <label for="productosNecesarios">Productos necesarios (opcional)</label>
+      <input type="text" id="productosNecesarios" name="productosNecesarios" placeholder="Ej: Cinta teflón, válvula..." />
+
+      <button type="submit">Enviar solicitud</button>
+    </form>
+    <p><a href="panel-cliente.html">Volver al panel cliente</a></p>
+  </div>
+</body>
+</html>

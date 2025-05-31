@@ -1,0 +1,234 @@
+/* reset básico y fuente */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  background: #fff;
+  max-width: 600px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* títulos */
+h1, h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* formularios */
+form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  color: #34495e;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.8px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+/* botones */
+button {
+  margin-top: 25px;
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  user-select: none;
+}
+
+button:hover,
+button:focus {
+  background-color: #1c5980;
+  outline: none;
+}
+
+/* enlaces */
+a {
+  color: #2980b9;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 18px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: #1c5980;
+  text-decoration: underline;
+}
+
+/* tablas (para gestión productos y servicios) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #2980b9;
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* botones dentro de tabla */
+.acciones button {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 6px;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.acciones button:hover {
+  background-color: #1d6fa5;
+}
+
+/* menú de navegación (panel empleado / cliente) */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  max-width: 320px;
+}
+
+nav ul li {
+  margin-bottom: 15px;
+}
+
+nav ul li a {
+  display: block;
+  background-color: #2980b9;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #1c5980;
+  text-decoration: none;
+  outline: none;
+}
+
+/* header simple para paneles */
+header {
+  background-color: #2980b9;
+  color: white;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Responsividad básica */
+@media (max-width: 640px) {
+  body {
+    padding: 15px;
+  }
+  .container {
+    padding: 20px;
+  }
+  nav ul {
+    max-width: 100%;
+  }
+}
+
+
+
+.boton {
+  display: inline-block;
+  padding: 6px 12px;
+  color: white;
+  background-color: #2980b9;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #1d6fa5;
+}
+
+.asignar {
+  background-color: #27ae60;
+}
+
+.asignar:hover {
+  background-color: #1e8449;
+}
+

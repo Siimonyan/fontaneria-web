@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestión de Usuarios - Empleado</title>
+  <link rel="stylesheet" href="../estilos.css" />
+</head>
+<body>
+  <div class="container">
+    <header>Gestión de Usuarios</header>
+
+    <form id="formUsuario" action="#" method="POST">
+      <label for="tipoUsuario">Tipo de Usuario</label>
+      <select id="tipoUsuario" name="tipoUsuario" required>
+        <option value="" disabled selected>Seleccione tipo</option>
+        <option value="cliente">Cliente</option>
+        <option value="empleado">Empleado</option>
+        <!-- Más tipos si aplican -->
+      </select>
+
+      <label for="nombreUsuario">Nombre completo</label>
+      <input type="text" id="nombreUsuario" name="nombreUsuario" required />
+
+      <label for="emailUsuario">Correo electrónico</label>
+      <input type="email" id="emailUsuario" name="emailUsuario" required />
+
+      <label for="telefonoUsuario">Teléfono</label>
+      <input type="text" id="telefonoUsuario" name="telefonoUsuario" required />
+
+      <label for="passwordUsuario">Contraseña</label>
+      <input type="password" id="passwordUsuario" name="passwordUsuario" required />
+
+      <button type="submit">Agregar Usuario</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Teléfono</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cliente</td>
+          <td>Ana López</td>
+          <td>ana.lopez@example.com</td>
+          <td>600123456</td>
+          <td class="acciones">
+            <button>Editar</button>
+            <button>Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Empleado</td>
+          <td>Juan Pérez</td>
+          <td>juan.perez@example.com</td>
+          <td>600654321</td>
+          <td class="acciones">
+            <button>Editar</button>
+            <button>Eliminar</button>
+          </td>
+        </tr>
+        <!-- Más usuarios dinámicos -->
+      </tbody>
+    </table>
+
+    <p><a href="panel-empleado.html">Volver al panel empleado</a></p>
+  </div>
+</body>
+</html>

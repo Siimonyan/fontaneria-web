@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestión de Servicios - Fontanería</title>
+  <link rel="stylesheet" href="../estilos.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h2 {
+      background: #3e79e7;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      text-align: center;
+      width: 100%;
+      max-width: 1000px;
+    }
+    table {
+      width: 100%;
+      max-width: 1000px;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #3e79e7;
+      color: white;
+    }
+    .acciones {
+      display: flex;
+      gap: 6px;
+    }
+    .acciones button {
+      padding: 6px 12px;
+      background: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .acciones button:hover {
+      background: #1f5fa3;
+    }
+    .acciones .asignar {
+      background-color: #27ae60;
+    }
+    .acciones .asignar:hover {
+      background-color: #1e8449;
+    }
+    .volver {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .volver a {
+      background: #777;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .volver a:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <h2>Gestión de Instalaciones y Reparaciones</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID Servicio</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
+        <th>Fecha solicitada</th>
+        <th>Estado</th>
+        <th>Fontanero asignado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1001</td>
+        <td>Instalación</td>
+        <td>Instalación cocina completa</td>
+        <td>2025-06-15</td>
+        <td>Pendiente</td>
+        <td>Juan Pérez</td>
+       <td class="acciones">
+  <button>Editar</button>
+  <button>Eliminar</button>
+  <a href="asingar-fontanero.html" class="asignar boton">Asignar Fontanero</a>
+</td>
+
+      </tr>
+      <tr>
+        <td>1002</td>
+        <td>Reparación</td>
+        <td>Fuga en baño principal</td>
+        <td>2025-06-16</td>
+        <td>En proceso</td>
+        <td>María Gómez</td>
+        <td class="acciones">
+  <button>Editar</button>
+  <button>Eliminar</button>
+  <a href="asingar-fontanero.html" class="asignar boton">Asignar Fontanero</a>
+</td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="volver">
+    <a href="panel-empleado.html">Volver al panel empleado</a>
+  </div>
+</body>
+</html>

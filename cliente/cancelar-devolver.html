@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cancelar o Devolver Pedido - Fontanería</title>
+  <link rel="stylesheet" href="../estilos.css" />
+  <style>
+    body { font-family: Arial, sans-serif; background: #fff0f0; padding: 20px; }
+    .container { max-width: 600px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 8px #ccc; }
+    label, select, textarea, button { display: block; width: 100%; margin-top: 12px; }
+    button { background: #dc3545; color: white; border: none; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+    button:hover { background: #a71d2a; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Cancelar Solicitud o Devolver Pedido</h2>
+    <form id="cancelarDevolver" action="#" method="POST">
+      <label for="pedidoId">Selecciona el pedido o la solicitud a cancelar</label>
+      <select id="pedidoId" name="pedidoId" required>
+        <option value="" disabled selected>Elige...</option>
+        <!-- Aquí se listarán los pedidos del cliente -->
+        <option value="12345">Pedido #12345 - Instalación cocina</option>
+        <option value="23456">Pedido #23456 - Producto: Válvula</option>
+      </select>
+
+      <label for="motivo">Motivo de cancelación o devolución</label>
+      <textarea id="motivo" name="motivo" rows="4" placeholder="Describe el motivo..." required></textarea>
+
+      <button type="submit">Enviar solicitud</button>
+    </form>
+    <p><a href="panel-cliente.html">Volver al panel cliente</a></p>
+  </div>
+</body>
+</html>

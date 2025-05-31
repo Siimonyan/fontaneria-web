@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asignar Fontanero - Fontanería</title>
+  <link rel="stylesheet" href="../estilos.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 500px;
+      width: 100%;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h2 {
+      color: #17a2b8;
+      margin-bottom: 24px;
+    }
+
+    form {
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-top: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+    }
+
+    button {
+      margin-top: 24px;
+      width: 100%;
+      padding: 12px;
+      background: #17a2b8;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #117a8b;
+    }
+
+    .volver {
+      margin-top: 20px;
+    }
+
+    .volver a {
+      display: inline-block;
+      text-decoration: none;
+      background: #777;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+    }
+
+    .volver a:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Asignar Fontanero a Servicio</h2>
+
+    <form id="asignarFontaneroForm" action="#" method="POST">
+      <label for="servicioId">Selecciona Servicio</label>
+      <select id="servicioId" name="servicioId" required>
+        <option value="" disabled selected>Elige un servicio pendiente</option>
+        <option value="1001">1001 - Instalación cocina</option>
+        <option value="1002">1002 - Reparación fuga baño</option>
+        <!-- Listado dinámico -->
+      </select>
+
+      <label for="fontaneroId">Selecciona Fontanero</label>
+      <select id="fontaneroId" name="fontaneroId" required>
+        <option value="" disabled selected>Elige un fontanero disponible</option>
+        <option value="f001">Juan Pérez</option>
+        <option value="f002">María Gómez</option>
+        <!-- Listado dinámico -->
+      </select>
+
+      <button type="submit">Asignar</button>
+    </form>
+
+    <div class="volver">
+      <a href="panel-empleado.html">Volver al panel empleado</a>
+    </div>
+  </div>
+</body>
+</html>
