@@ -33,5 +33,30 @@
       <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
     </div>
   </div>
+  <script>
+  document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const emailIngresado = document.getElementById("email").value.trim();
+    const passwordIngresado = document.getElementById("password").value;
+
+    const datosGuardados = localStorage.getItem("usuarioRegistrado");
+    if (!datosGuardados) {
+      alert("No hay usuarios registrados.");
+      return;
+    }
+
+    const usuario = JSON.parse(datosGuardados);
+
+    if (usuario.email === emailIngresado && usuario.password === passwordIngresado) {
+      alert("Inicio de sesión exitoso.");
+      // Guardar sesión si quieres
+      window.location.href = "panel-empleado.html"; // o redirige al panel del cliente si prefieres
+    } else {
+      alert("Correo o contraseña incorrectos.");
+    }
+  });
+</script>
+
 </body>
 </html>
